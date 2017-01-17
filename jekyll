@@ -1,4 +1,0 @@
-#! /bin/bash
-
-eval $(docker-machine env)
-docker run --rm -it --volume=$(pwd):/srv/jekyll jekyll/jekyll $@
