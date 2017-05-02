@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="home">
+
+<p>JR4 Consulting, Inc. is a software services company based in Austin, TX.</p>
+<p>We specialize in various types of development including Python, Ruby, Javascript, NodeJS, and Go.</p>
+
+  {% if site.posts.size > 0 %}
+  <h1 class="page-heading">Posts</h1>
+  
+  {{ content }}
+
+  <ul class="post-list">
+		{% for post in site.posts %}
+		  <li>
+			<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+			<h2>
+			  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+			</h2>
+		  </li>
+		{% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+{% endif %}
+
+</div>

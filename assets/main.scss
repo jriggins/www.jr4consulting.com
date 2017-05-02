@@ -36,13 +36,11 @@ $on-laptop:        800px;
 // }
 
 // Import partials from the `minima` theme.
-//@import "minima";
-
+@import "minima";
 .site-title img {
 	width: 25%;
 	height: 25%;
 }
-
 .site-title {
 	width: 500px;
 }
